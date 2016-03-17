@@ -528,7 +528,7 @@ class Vector(dict):
     @property
     def squared(self):
         if not self._squared:
-            self._squared = self % self
+            self._squared = self.__mod__(self, self) # maybe here needs dot production
         return self._squared
     
     def distance(self,other):
