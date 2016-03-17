@@ -93,6 +93,7 @@ class BaseNode(object):
     
     def d2(self,other):
         # print "\n\nself%s %s\nn: %i other n: %i" % (hash(self), self, self.n,other.n)
+        # i really can't understand what the '%' here means, can you explain that, thanks.
         return (other.n * self.squared + self.n * other.squared - 2 * (self.ls % other.ls)) / (self.n * other.n)
     
     def d4(self,other):
